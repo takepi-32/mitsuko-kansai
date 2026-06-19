@@ -37,6 +37,7 @@ html,body{
 }
 .page{
   position:relative;width:210mm;height:297mm;overflow:hidden;
+  display:flex;flex-direction:column;
   background:
     radial-gradient(120% 60% at 100% 0%, #f6e9f6 0%, rgba(246,233,246,0) 55%),
     radial-gradient(120% 70% at 0% 100%, #efe1f7 0%, rgba(239,225,247,0) 55%),
@@ -53,7 +54,7 @@ html,body{
 
 .top-accent{height:7mm;background:linear-gradient(90deg,var(--plum-deep),var(--plum-soft) 60%,var(--lav));}
 
-.pad{padding:5.5mm 12mm 52mm 13mm;position:relative;z-index:2;}
+.pad{padding:5mm 12mm 3mm 13mm;position:relative;z-index:2;flex:1 1 auto;}
 
 /* ---------- HERO ---------- */
 .topline{display:flex;align-items:center;gap:0;margin-bottom:1mm;}
@@ -77,17 +78,17 @@ html,body{
   margin-left:-3mm;}
 
 .title{font-family:"Zen Maru Gothic","Noto Sans CJK JP",sans-serif;font-weight:900;
-  font-size:37pt;line-height:1.02;letter-spacing:.01em;margin-top:2mm;
+  font-size:34pt;line-height:1.0;letter-spacing:.01em;margin-top:1.5mm;
   background:linear-gradient(180deg,#6a458f 0%,#9466c0 100%);
   -webkit-background-clip:text;background-clip:text;color:#6a458f;-webkit-text-fill-color:transparent;
   text-shadow:0 1px 0 rgba(255,255,255,.4);}
 .subtitle{font-family:"Shippori Mincho B1","Noto Serif CJK JP",serif;font-weight:800;
-  font-size:22pt;color:var(--plum-deep);letter-spacing:.06em;margin-top:2mm;}
+  font-size:20pt;color:var(--plum-deep);letter-spacing:.06em;margin-top:1.5mm;}
 .subtitle .ren{color:var(--gold);}
 .tagline{font-family:"Shippori Mincho B1","Noto Serif CJK JP",serif;font-weight:600;
-  font-size:12pt;color:var(--plum);margin-top:2.5mm;letter-spacing:.04em;}
+  font-size:11.5pt;color:var(--plum);margin-top:2mm;letter-spacing:.04em;}
 
-.endorse{margin-top:3mm;border-left:2.4mm solid var(--lav);padding-left:4mm;}
+.endorse{margin-top:2mm;border-left:2.4mm solid var(--lav);padding-left:4mm;}
 .end-lead{font-family:"Shippori Mincho B1","Noto Serif CJK JP",serif;font-weight:700;
   font-size:11pt;color:var(--plum-deep);line-height:1.45;}
 .end-name{font-size:9.5pt;color:var(--ink-soft);margin-top:1.5mm;line-height:1.3;}
@@ -103,14 +104,14 @@ html,body{
 .name-tag .nm small{font-size:11pt;font-weight:700;}
 
 /* ---------- INFO BOXES ---------- */
-.section{margin-top:3mm;}
+.section{margin-top:2.5mm;}
 .bar{display:inline-block;background:linear-gradient(90deg,var(--plum-deep),var(--plum));
   color:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:13pt;
   padding:1.6mm 7mm;letter-spacing:.1em;border-radius:4px 4px 0 0;}
 .box{background:var(--boxbg);border:1.4px solid var(--line);border-top:3px solid var(--plum);
-  border-radius:0 10px 10px 10px;padding:3mm 6mm;box-shadow:0 2px 6px rgba(90,58,134,.06);}
+  border-radius:0 10px 10px 10px;padding:2.5mm 6mm;box-shadow:0 2px 6px rgba(90,58,134,.06);}
 
-.row{display:flex;font-size:11pt;line-height:1.4;margin-bottom:1.4mm;}
+.row{display:flex;font-size:10.5pt;line-height:1.35;margin-bottom:1.2mm;}
 .row:last-child{margin-bottom:0;}
 .lbl{flex:0 0 23mm;font-weight:700;color:var(--plum-deep);}
 .val{flex:1 1 auto;color:var(--ink);}
@@ -126,17 +127,17 @@ html,body{
 .fee .p span{font-size:10pt;}
 
 /* gold-diamond headed blocks */
-.blk{margin-top:2.4mm;}
+.blk{margin-top:2mm;}
 .blk-h{display:flex;align-items:center;gap:2.5mm;font-family:"Zen Kaku Gothic New",sans-serif;
   font-weight:700;font-size:12.5pt;color:var(--plum-deep);}
 .dia{width:0;height:0;flex:0 0 auto;
   border:2.4mm solid transparent;border-bottom-color:var(--gold);position:relative;top:-2.4mm;}
 .dia::after{content:"";position:absolute;left:-2.4mm;top:2.4mm;
   border:2.4mm solid transparent;border-top-color:var(--gold);}
-.blk-body{font-size:10.2pt;line-height:1.45;color:var(--ink);margin-top:1mm;padding-left:7mm;}
+.blk-body{font-size:9.8pt;line-height:1.4;color:var(--ink);margin-top:0.8mm;padding-left:7mm;}
 .blk-body b{color:var(--plum-deep);}
 
-.bottom{position:absolute;left:0;right:0;bottom:0;}
+.bottom{flex:0 0 auto;}
 .cta{display:flex;align-items:stretch;gap:6mm;padding:3.2mm 12mm 3.2mm 13mm;
   background:linear-gradient(90deg,#f5ecfb,#efe2f7);}
 .cta-item{flex:1 1 0;display:flex;align-items:center;gap:4mm;}
