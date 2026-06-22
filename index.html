@@ -105,21 +105,32 @@ html,body{
 .blk-body b{color:var(--plum-deep);}
 
 /* QR CTA */
-.cta{display:flex;gap:10px;padding:10px 16px;background:linear-gradient(90deg,#f5ecfb,#efe2f7);margin-top:8px;}
-.cta-item{flex:1 1 0;display:flex;align-items:flex-start;gap:7px;}
+.cta{display:table;width:100%;table-layout:fixed;
+  background:linear-gradient(90deg,#f5ecfb,#efe2f7);margin-top:8px;}
+.cta-item{display:table-cell;width:50%;vertical-align:top;
+  padding:10px 10px 10px 12px;box-sizing:border-box;}
 .cta-item+.cta-item{border-left:1.2px solid var(--lav);padding-left:10px;}
-.qr-card{flex:0 0 auto;background:#fff;border:1.2px solid var(--line);border-radius:6px;padding:3px;
+.cta-inner{display:table;width:100%;}
+.qr-card{display:table-cell;vertical-align:top;width:42px;
+  background:#fff;border:1.2px solid var(--line);border-radius:6px;padding:2px;
   box-shadow:0 1px 4px rgba(90,58,134,.12);}
-.qr-card img{display:block;width:52px;height:52px;image-rendering:pixelated;}
-.ci-txt{flex:1 1 auto;}
-.ci-h{display:inline-block;color:#fff;font-weight:700;font-size:10px;letter-spacing:.04em;
-  padding:3px 8px;border-radius:14px;}
-.ci-h::before{content:"▶ ";font-size:8px;}
+.qr-card img{display:block;width:38px;height:38px;image-rendering:pixelated;}
+.ci-txt{display:table-cell;vertical-align:top;padding-left:6px;}
+.ci-h{display:inline-block;color:#fff;font-weight:700;font-size:9px;letter-spacing:.02em;
+  padding:3px 7px;border-radius:12px;margin-bottom:3px;}
+.ci-h::before{content:"▶ ";font-size:7px;}
 .ci-h.apply{background:linear-gradient(90deg,var(--gold),#eab94e);}
 .ci-h.contact{background:linear-gradient(90deg,var(--plum-deep),var(--plum));}
-.ci-note{font-size:8.5px;color:var(--ink);line-height:1.45;margin-top:3px;}
+.ci-note{font-size:8px;color:var(--ink);line-height:1.4;}
 .ci-note b{color:var(--plum-deep);}
 
+/* プロフィール */
+.profile{margin-top:8px;background:#fff;border:1.2px solid var(--line);
+  border-left:4px solid var(--plum);border-radius:0 8px 8px 0;padding:10px 12px;}
+.profile-h{font-family:"Shippori Mincho B1","Noto Serif CJK JP",serif;font-weight:800;
+  font-size:12px;color:var(--plum-deep);margin-bottom:6px;letter-spacing:.06em;}
+.profile-h span{color:var(--gold);}
+.profile-body{font-size:10px;line-height:1.7;color:var(--ink);}
 /* FOOTER */
 .footer{background:linear-gradient(90deg,var(--plum-deep),var(--plum) 70%,var(--plum-soft));
   color:#fff;text-align:center;padding:12px 0;}
@@ -198,9 +209,15 @@ html,body{
       </div>
     </div>
 
-  </div>
+    <div class="profile">
+      <div class="profile-h">✦ <span>大河原 光子</span> さんのプロフィール</div>
+      <div class="profile-body">
+        昨年の転機を経て、現在は上場企業の人事担当、「ゼロ秒思考」を日々の業務と人生に実装し、高い評価を得る実践者です。赤羽雄二氏・土井英司氏からも評価されています。朝活コミュニティ「朝5時の新習慣」主宰、「長女部屋」主宰、「経営730」運営メンバー。福島県出身・東京在住、防災士。<br><br>
+        書店7年勤務から未経験にもかかわらず事務職に転身、短期集中でPCスキルを習得。この頃からやる！と決めて、そこに照準を合わせて行動する大切さを知る。ワーキングマザー歴19年、育児と仕事をしながら、PTA役員・読み聞かせボランティア、地域防災活動を行う。その間、配偶者の闘病と死別を経験。2015年に週末起業で講師業やコーチングを開始。困難の只中でも「やると決めて行動に落とす」再現性ある手法で、個人とチームの生産性向上をサポートしています。一歩踏み出すきっかけを、ぜひ本セミナーで掴んでください。
+      </div>
+    </div>
 
-  <div class="cta">
+  </div>
     <div class="cta-item">
       <div class="qr-card"><img src="data:image/png;base64,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" alt="申込QR"></div>
       <div class="ci-txt">
